@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regalo Sorpresa</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            display: none;
+            margin-top: 20px;
+            width: 300px;
+        }
+        #audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Destapa tu regalo!</h1>
+    <button id="revealButton">Destapa tu regalo</button>
+    <img id="flowerImage" src="A_bouquet_of_yellow_flowers_in_the_style_of_Vincen.png" alt="Ramo de flores amarillas">
+    
+    <audio id="audio" controls>
+        <source src="flores_amarillas.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <script>
+        const button = document.getElementById('revealButton');
+        const image = document.getElementById('flowerImage');
+        const audio = document.getElementById('audio');
+
+        button.addEventListener('click', function() {
+            image.style.display = 'block';
+            audio.style.display = 'block';
+            audio.play();
+        });
+    </script>
+</body>
+</html>
