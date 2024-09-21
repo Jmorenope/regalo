@@ -6,40 +6,66 @@
     <title>Regalo Sorpresa</title>
     <style>
         body {
+            background-color: #2f2f2f; /* Fondo gris oscuro */
+            color: white;
             text-align: center;
             margin-top: 50px;
             font-family: Arial, sans-serif;
+        }
+        button {
+            background-color: #ffcc00;
+            color: #2f2f2f;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
         img {
             display: none;
             margin-top: 20px;
             width: 300px;
         }
-        #audio {
+        #video {
             display: none;
+            margin-top: 20px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        #loveMessage {
+            display: none;
+            font-size: 24px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <h1>¡Destapa tu regalo!</h1>
-    <button id="revealButton">Destapa tu regalo</button>
+    <button id="revealButton">Oprime aquí para abrir tu regalo</button>
+    
+    <!-- Imagen centrada -->
     <img id="flowerImage" src="A_bouquet_of_yellow_flowers_in_the_style_of_Vincen.png" alt="Ramo de flores amarillas">
     
-    <audio id="audio" controls>
-        <source src="flores_amarillas.mp3" type="audio/mpeg">
-        Tu navegador no soporta el elemento de audio.
-    </audio>
+    <!-- Video de YouTube -->
+    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/RbqF6Rbd_Zw?autoplay=1&mute=1" 
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
+    <!-- Mensaje de amor -->
+    <div id="loveMessage">TE AMO MI AMOR</div>
 
     <script>
         const button = document.getElementById('revealButton');
         const image = document.getElementById('flowerImage');
-        const audio = document.getElementById('audio');
+        const video = document.getElementById('video');
+        const loveMessage = document.getElementById('loveMessage');
 
         button.addEventListener('click', function() {
             image.style.display = 'block';
-            audio.style.display = 'block';
-            audio.play();
+            video.style.display = 'block';
+            loveMessage.style.display = 'block';
         });
     </script>
 </body>
 </html>
+
